@@ -32,9 +32,9 @@
         <RadioButton  text="File" toggleGroup="$CopyTypeGroup" selected="true" fx:id="copyFile"/>
         <RadioButton  text="Directory" toggleGroup="$CopyTypeGroup" fx:id="copyDirectory"/>
     </HBox>
-    <CheckBox GridPane.rowIndex="3" GridPane.columnIndex="1" text="Clear Fields" GridPane.columnSpan="2" fx:id="clearTheFields"
-        onAction="#handleChange"/>
+    <CheckBox GridPane.rowIndex="3" GridPane.columnIndex="1" text="Clear Fields" GridPane.columnSpan="2" fx:id="clearTheFields"/>
     <Button text="Copy"  GridPane.rowIndex="4" GridPane.columnIndex="1" GridPane.halignment="CENTER" fx:id="copyButton" onAction="#onEventButtonClick"/>
+    <Label fx:id="completeLabel" text="Complete" GridPane.rowIndex="5" GridPane.columnIndex="0" />
 
 
     <columnConstraints>
