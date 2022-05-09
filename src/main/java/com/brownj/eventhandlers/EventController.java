@@ -32,6 +32,9 @@ public class EventController {
     private RadioButton copyDirectory;
 
     @FXML
+    private CheckBox clearTheFields;
+
+    @FXML
     public void initialize(){
         copyButton.setDisable(true);
     }
@@ -79,7 +82,13 @@ public class EventController {
                 }
 
             }
+            if(clearTheFields.isSelected()) {
+                pathToCopyFrom.clear();
+                pathToCopyTo.clear();
+            }
         } catch (IOException e) {
+            // IOException
+            // NoSuchFileException
             e.printStackTrace();
         }
 
@@ -92,6 +101,10 @@ public class EventController {
         boolean disableButtons = fileName.isEmpty() || fileName.trim().isEmpty();
         copyButton.setDisable(disableButtons);
 
+    }
+
+    public void handleChange() {
+        System.out.println("The checkbox is " + (clearTheFields.isSelected() ? "checked" : "not checked"));
     }
     
 }
