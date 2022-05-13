@@ -77,7 +77,8 @@ public class EventController {
                             }
 
                             for (Path filePath : contents) {
-
+                                String newPathStr = copied.toString() + "/" + filePath.getFileName();
+                                Path newPath = Paths.get(newPathStr);
                                 if (!Files.isDirectory(filePath)) {
                                     Files.copy(filePath, newPath, StandardCopyOption.REPLACE_EXISTING);
                                 } else {
